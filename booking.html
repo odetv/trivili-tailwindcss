@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://127.0.0.1:8000/booking# -->
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="dist/output.css"> -->
+    <link rel="stylesheet" href="dist/booking/all.min.css">
+    <link rel="stylesheet" href="dist/booking/app.css">
+    <link rel="stylesheet" href="dist/booking/output.css">
+    <link rel="stylesheet" href="dist/booking/app.7fa3e720.css">
+    <link rel="shortcut icon" href="dist/img/favicon-trivili.png">
+    <title>Trivili | Trip in Bali</title>
+    <script type="module" src="dist/booking/vite.config.js"></script>
+    <script type="module" src="dist/booking/vite.config.js.download"></script>
+    <link rel="stylesheet" href="http://[::1]:5173/resources/css/app.css" />
+    <script type="module" src="dist/booking/app.js"></script>
+    <script src="../path/to/flowbite/dist/datepicker.js"></script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/datepicker.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="http://api.iksgroup.co.id/apijs/lokasiapi.js"></script>
+    <script src="http://api.iksgroup.co.id/apijs/lokasiapi.js"></script>
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+
+<body>
+    <!-- Header Start -->
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="px-4 flex items-center cursor-pointer">
+                    <!-- <a href="#home" class="font-bold text-3xl text-primary block py-6">
+                        Trivili
+                    </a> -->
+                    <a href="#home"><img src="dist/img/logo-trivili.png" alt="Trivili" class="w-30 h-10 mt-5 mb-5"></a>
+                    <!-- <img src="dist/img/logo-wonderfullindonesia.png" alt="Trivili" class="w-30 h-10 px-4"> -->
+                </div>
+                <!-- Menu Hamburger -->
+                <div class="flex items-center px-4">
+                    <button id="menu-hamburger" name="menu-hamburger" type="button"
+                        class="block absolute right-4 lg:hidden">
+                        <span class="menu-hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                        <span class="menu-hamburger-line transition duration-300 ease-in-out"></span>
+                        <span class="menu-hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                    </button>
+
+                    <!-- Menu Navbar -->
+                    <nav id="nav-menu"
+                        class="hidden absolute py-5 px-5 bg-slate-100 shadow-lg rounded-lg max-w[250px] right-0 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a href="/#home"
+                                    class="text-base text-primary py-2 mx-8 flex group-hover:text-secondary transition duration-300 ease-in-out">Home</a>
+                            </li>
+                            <li class="group">
+                                <a href="/#pricing"
+                                    class="text-base text-primary py-2 mx-8 flex group-hover:text-secondary transition duration-300 ease-in-out">Pricing</a>
+                            </li>
+                            <li class="group">
+                                <a href="/#gallery"
+                                    class="text-base text-primary py-2 mx-8 flex group-hover:text-secondary transition duration-300 ease-in-out">Gallery</a>
+                            </li>
+                            <li class="group">
+                                <a href="/#contact"
+                                    class="text-base text-primary py-2 mx-8 flex group-hover:text-secondary transition duration-300 ease-in-out">Contact</a>
+                            </li>
+                            <li class="group">
+                                <a href="/#booking"
+                                    class="text-base text-primary py-2 mx-8 flex group-hover:text-secondary transition duration-300 ease-in-out">Pesanan</a>
+                            </li>
+                            <li class="group">
+                                <a href="/#about"
+                                    class="text-base text-primary py-2 mx-8 flex group-hover:text-secondary transition duration-300 ease-in-out">About</a>
+                            </li>
+                            <!-- <li class="flex items-center pl-8 py-2">
+                                <div class="flex">
+                                    <span class="mr-2 text-sm text-primary">Light</span>
+                                    <input type="checkbox" class="hidden" id="dark-toggle">
+                                    <label for="dark-toggle">
+                                        <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-primary p-1">
+                                            <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out">
+
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <span class="ml-2 text-sm text-primary">Dark</span>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <main class="py-6 bg-slate-100">
+        <div class="max-w-7xl mt-10 mx-auto hp:px-3 lg:px-8">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <!-- Komponen Checker -->
+                <div class="flex items-baseline justify-between border-b border-gray-200 pt-2 pb-6 hp:flex-col">
+                    <h1 class="text-4xl font-bold tracking-tight text-gray-900 hp:text-2xl pb-3">Paket Destinasi
+                        Trivili</h1>
+                    <div class="flex items-center">
+                        <div date-rangepicker="" class="lg:flex justify-center items-center">
+                            <div class="relative">
+                                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                    <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fillrule="evenodd"
+                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                            cliprule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <input name="start" type="text"
+                                    class="px-6 py-2.5 bg-gray-50 border border-slate-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2 hp:text-sm transition duration 150 ease-in-out datepicker-input"
+                                    placeholder="Check-in">
+                            </div>
+                            <span class="mx-4 text-gray-500">-</span>
+                            <div class="relative">
+                                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                    <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fillrule="evenodd"
+                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                            cliprule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <input name="end" type="text"
+                                    class="px-6 py-2.5 bg-gray-50 border border-slate-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2 hp:text-sm transition duration 150 ease-in-out datepicker-input"
+                                    placeholder="Check-out">
+                            </div>
+                        </div>
+                        <button type="button"
+                            class="inline-block mx-4 px-6 py-3 border border-slate-300 text-primary font-medium text-xs leading-tight uppercase rounded-md hover:bg-red-400 hover:text-white focus:outline-none focus:ring-0 transition duration 150 ease-in-out"><a
+                                href="#paket-wisata">Cek Tiket</a> </button>
+                        <button type="button"
+                            class="inline-block px-6 py-3 border border-slate-300 text-primary font-medium text-xs leading-tight uppercase rounded-md hover:bg-red-400 hover:text-white focus:outline-none focus:ring-0 transition duration 150 ease-in-out"><a
+                                href="#slide-over-title">Keranjang</a>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Komponen Utama -->
+                <div class="lg:flex">
+                    <section class="">
+                        <!-- Daftar Paket Wisata -->
+                        <div class="bg-white rounded-lg p-4 shadow-lg md:flex font-sans pt-8 mt-6 mb-6">
+                            <div class="md:shrink-0">
+                                <img src="dist/booking/a8b62bfde85ccb9ca41ef.jpg" alt=""
+                                    class="h-48 w-96 md:h-full md:w-56 inset-0 wfull object-cover rounded-lg hover:scale-105 transition duration 150 ease-in-out"
+                                    loading="lazy">
+                            </div>
+                            <form class="p-6">
+                                <div class="flex flex-wrap">
+                                    <h1 class="item1 flex-auto font-medium text-slate-900">
+                                        Kecak Fire Dance
+                                    </h1>
+                                    <div class="price1 w-full flex-none mt-2 order-1 text-3xl fontbold text-violet-600">
+                                        Rp.155000
+                                    </div>
+                                    <div class="text-sm font-medium text-slate-400">
+                                        Tersedia
+                                    </div>
+                                </div>
+                                <div class="flex items-baseline mt-4 mb-6 pb-6 border-b borderslate-200">
+                                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                                    in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                                    old.
+                                </div>
+                                <div class="flex space-x-4 mb-5 text-sm font-medium">
+                                    <div class="flex-auto flex space-x-4">
+                                        <button
+                                            class="h-10 px-6 font-semibold rounded-full bg-primary text-white hover:bg-primary hover:text-white focus:outline-none focus:ring-0 transition duration 150 ease-in-out"
+                                            type="submit"><a href="#">Booking</a>
+                                        </button>
+                                        <button data-bs-toggle="modal" data-bstarget="#exampleModalLg"
+                                            class="h-10 px-6 font-semibold rounded-full border border-slate200 text-slate-900 hover:bg-red-400 hover:text-white focus:outline-none focus:ring-0 transition duration 150 ease-in-out"
+                                            type="button"><a href="#">Cek Tiket</a>
+                                        </button>
+                                    </div>
+                                    <button
+                                        class="flex-none flex items-center justify-center w-9 h9 rounded-full text-violet-600 bg-violet-50 hover:text-red-500"
+                                        type="button" aria-label="Cart" id="cart">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                    <button
+                                        class="flex-none flex items-center justify-center w-9 h9 rounded-full text-violet-600 bg-violet-50 hover:text-red-500"
+                                        type="button" aria-label="Like">
+                                        <svg width="20" height="20" fill="currentColor" ariahidden="true">
+                                            <path fill-rule="evenodd" cliprule="evenodd"
+                                                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <p class="text-sm text-slate-500">
+                                    Location : Ubud
+                                </p>
+                                <p class="text-sm text-slate-500">
+                                    Comunity : Kecak FD Bali
+                                </p>
+                            </form>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 shadow-lg md:flex font-sans pt-8 mt-6 mb-6">
+                            <div class="md:shrink-0">
+                                <img src="dist/booking/a8b62bfde85ccb9ca41ef.jpg" alt=""
+                                    class="h-48 w-96 md:h-full md:w-56 inset-0 wfull object-cover rounded-lg hover:scale-105 transition duration 150 ease-in-out"
+                                    loading="lazy">
+                            </div>
+                            <form class="p-6">
+                                <div class="flex flex-wrap">
+                                    <h1 class="item1 flex-auto font-medium text-slate-900">
+                                        Kecak Bali Tradisional
+                                    </h1>
+                                    <div class="price1 w-full flex-none mt-2 order-1 text-3xl fontbold text-violet-600">
+                                        Rp.130000
+                                    </div>
+                                    <div class="text-sm font-medium text-slate-400">
+                                        Tersedia
+                                    </div>
+                                </div>
+                                <div class="flex items-baseline mt-4 mb-6 pb-6 border-b borderslate-200">
+                                    There are many variations of passages of Lorem Ipsum available, but the majority
+                                    have suffered alteration in some form, by injected humour, or randomised words
+                                    which don't look even slightly believable.
+                                </div>
+                                <div class="flex space-x-4 mb-5 text-sm font-medium">
+                                    <div class="flex-auto flex space-x-4">
+                                        <button
+                                            class="h-10 px-6 font-semibold rounded-full bg-primary text-white hover:bg-primary hover:text-white focus:outline-none focus:ring-0 transition duration 150 ease-in-out"
+                                            type="submit"><a href="#">Booking</a>
+                                        </button>
+                                        <button data-bs-toggle="modal" data-bstarget="#exampleModalLg"
+                                            class="h-10 px-6 font-semibold rounded-full border border-slate200 text-slate-900 hover:bg-red-400 hover:text-white focus:outline-none focus:ring-0 transition duration 150 ease-in-out"
+                                            type="button"><a href="#">Cek Tiket</a>
+                                        </button>
+                                    </div>
+                                    <button
+                                        class="flex-none flex items-center justify-center w-9 h9 rounded-full text-violet-600 bg-violet-50 hover:text-red-500"
+                                        type="button" aria-label="Cart" id="cart">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                    <button
+                                        class="flex-none flex items-center justify-center w-9 h9 rounded-full text-violet-600 bg-violet-50 hover:text-red-500"
+                                        type="button" aria-label="Like">
+                                        <svg width="20" height="20" fill="currentColor" ariahidden="true">
+                                            <path fill-rule="evenodd" cliprule="evenodd"
+                                                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <p class="text-sm text-slate-500">
+                                    Location : Tanah Lot
+                                </p>
+                                <p class="text-sm text-slate-500">
+                                    Comunity : Kecak Tradisional
+                                </p>
+                            </form>
+                        </div>
+                        <!-- Komponen Prev or Next -->
+                        <div class=" font-sans pt-8 text-center">
+                            <a href="#"
+                                class="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-700 hover:text-white">
+                                Kembali
+                            </a>
+                            <!-- Next Button -->
+                            <a href="#"
+                                class="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-700 hover:text-white">
+                                Selanjutnya
+                            </a>
+                        </div>
+                    </section>
+                    <!-- Komponen Keranjang Pesanan -->
+                    <section class="flex flex-row lg:w-1/2 justify-content-center mt-6">
+                        <div class="pointer-events-auto w-screen lg:max-w-md">
+                            <div class="leading-loose flex flex-col lg:ml-6 bg-white rounded-lg">
+                                <form class="w-full p-5 bg-white rounded-lg shadow-lg">
+                                    <p class="text-dark text-xl font-bold mb-2 uppercase">Input Data Pemesan</p>
+                                    <div id="">
+                                        <div class="">
+                                            <label class="block text-base text-dark" for="cus_email">Nama</label>
+                                            <input class="w-full px-2 py-2 text-gray-500 bg-gray-200 rounded"
+                                                id="addNama" value="">
+
+                                        </div>
+                                        <div class="">
+                                            <label class="block text-base text-dark" for="cus_email">Email</label>
+                                            <input class="w-full px-2 py-2 text-gray-500 bg-gray-200 rounded"
+                                                id="addEmail" value="">
+                                        </div>
+                                        <div class="">
+                                            <label class="block text-base text-dark" for="cus_email">Alamat</label>
+                                            <input class="w-full px-2 py-2 text-gray-500 bg-gray-200 rounded"
+                                                id="addAlamat" value="">
+                                        </div>
+                                        <div class="">
+                                            <label class="text-base text-dark" for="cus_email">Kota Domisili</label>
+                                            <input class="w-full px-2 py-2 text-gray-500 bg-gray-200 rounded"
+                                                id="addProvinsi" value="">
+                                        </div>
+                                        <div class="inline-block w-1/2 pr-1">
+                                            <label class="text-base text-dark" for="cus_email">Negara</label>
+                                            <input class="w-full px-2 py-2 text-gray-500 bg-gray-200 rounded"
+                                                id="addNegara" value="">
+                                        </div>
+                                        <div class="inline-block -mx-1 pl-1 w-1/2">
+                                            <label class="text-base text-dark" for="cus_email">Kode
+                                                Pos</label>
+                                            <input class="w-full px-2 py-2 text-gray-500 bg-gray-200 rounded"
+                                                id="addPos" value="">
+                                        </div>
+                                        <button
+                                            class="mt-4 cursor-pointer float-right px-4 py-1 text-base text-white bg-primary rounded-md hover:shadow-lg hover:opacity-50 transition duration-300 ease-in-out"
+                                            type="button" name="submit" id="submit">Kirim
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="flex flex-col lg:ml-6 mt-3 bg-white rounded-lg shadow-lg hp:mt-6">
+                                <div class="flex-1 overflow-y-auto py-6 px-4 sm:px-6">
+                                    <div class="flex items-start justify-between">
+                                        <h2 class="text-dark text-xl font-bold uppercase" id="slide-over-title">
+                                            Keranjang Pesanan</h2>
+                                    </div>
+
+                                    <div class="mt-8">
+                                        <div class="flow-root">
+                                            <ul role="list" class="-my-6 divide-y divide-gray-200">
+                                                <li class="flex py-6">
+
+
+                                                    <div class="ml-4 flex flex-1 flex-col">
+                                                        <div>
+                                                            <ul class="flex text-base font-medium text-gray-900">
+                                                                <li id="addList" class="pr-6"></li>
+                                                                <li class="price1"></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <!-- More products... -->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6 text-right">
+                                    <button type="button"
+                                        class="hapus font-medium text-indigo-600 hover:text-indigo-500">Hapus
+                                        Pesanan</button>
+                                </div>
+                                <div class="border-t">
+                                    <div
+                                        class="w-96 h-13 flex items-center justify-center pl-3 bg-white border rounded-lg mt-4 mb-2 mx-auto">
+                                        <input type="coupon" name="code" id="coupon" value="" placeholder="Kode Promo"
+                                            class="w-full bg-white outline-none appearance-none focus:outline-none active:outline-none">
+                                        <button type="submit"
+                                            class="text-sm flex items-center px-3 py-1 text-white bg-gray-800 rounded-lg outline-none md:px-4 hover:bg-gray-700 focus:outline-none active:outline-none">
+                                            <svg aria-hidden="true" data-prefix="fas" data-icon="gift" class="w-8"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                    d="M32 448c0 17.7 14.3 32 32 32h160V320H32v128zm256 32h160c17.7 0 32-14.3 32-32V320H288v160zm192-320h-42.1c6.2-12.1 10.1-25.5 10.1-40 0-48.5-39.5-88-88-88-41.6 0-68.5 21.3-103 68.3-34.5-47-61.4-68.3-103-68.3-48.5 0-88 39.5-88 88 0 14.5 3.8 27.9 10.1 40H32c-17.7 0-32 14.3-32 32v80c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16v-80c0-17.7-14.3-32-32-32zm-326.1 0c-22.1 0-40-17.9-40-40s17.9-40 40-40c19.9 0 34.6 3.3 86.1 80h-86.1zm206.1 0h-86.1c51.4-76.5 65.7-80 86.1-80 22.1 0 40 17.9 40 40s-17.9 40-40 40z">
+                                                </path>
+                                            </svg>
+                                            <span class="font-medium">Gunakan Promo</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="border-gray-200 py-6 px-4 sm:px-6">
+                                    <div class="flex justify-between text-base font-medium text-gray-900">
+                                        <p>TOTAL (Rp.)</p>
+                                        <p class="total">NaN</p>
+                                    </div>
+                                    <p class="mt-0.5 text-sm text-gray-500">Harga sudah termasuk PPN.</p>
+                                    <div class="mt-6">
+                                        <a href="#"
+                                            class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">CHECKOUT</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-xhidden overflow-y-auto"
+            id="exampleModalLg" tabindex="-1" arialabelledby="exampleModalLgLabel" aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-lg relative w-auto pointer-events-none">
+                <div
+                    class="modal-content border-none shadow-lg relative flex flex-col wfull pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section Start -->
+    <footer class="bg-dark pt-24 pb-12">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 mb-12 text-white font-thin text-sm md:w-1/3">
+                    <img src="dist/img/favicon-trivili.png" width="120px" class="mb-5">
+                    <!-- <h2 class="font-bold text-4xl mb-5 sm:text-2xl">Trivili</h2> -->
+                    <h3 class="font-semibold text-2xl mb-2 sm:text-lg">Kontak kami</h3>
+                    <p
+                        class="text-base transition duration-300 ease-in-out text-slate-300 hover:text-secondary hover:cursor-pointer mb-2 sm:text-sm">
+                        trivili@gmail.com</p>
+                    <p
+                        class="text-base transition duration-300 ease-in-out text-slate-300 hover:text-secondary hover:cursor-pointer mb-2 sm:text-sm">
+                        Buleleng, Bali</p>
+                    <p
+                        class="text-base transition duration-300 ease-in-out text-slate-300 hover:text-secondary hover:cursor-pointer mb-2 sm:text-sm">
+                        Indonesia</p>
+                </div>
+                <div class="w-full px-4 text-white font-thin text-sm mb-12 md:w-1/3">
+                    <h3 class="font-semibold text-2xl mb-2 sm:text-lg">Jasa</h3>
+                    <ul>
+                        <li>
+                            <a href="#"
+                                class="inline-block text-base transition duration-300 ease-in-out text-slate-300 hover:text-secondary mb-2 sm:text-sm">Travel
+                                Wisata</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="inline-block text-base transition duration-300 ease-in-out text-slate-300 hover:text-secondary mb-2 sm:text-sm">Agent
+                                Travel Bali</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="inline-block text-base transition duration-300 ease-in-out text-slate-300 hover:text-secondary mb-2 sm:text-sm">Wonderfull
+                                Bali Indonesia</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full px-4 text-white font-thin text-sm mb-12 md:w-1/3">
+                    <h3 class="font-semibold text-2xl mb-2 sm:text-lg">Halaman</h3>
+                    <ul>
+                        <li>
+                            <a href="#home"
+                                class="inline-block text-base transition duration-300 ease-in-out text-slate-300 hover:text-secondary mb-2 sm:text-sm">Home</a>
+                        </li>
+                        <li>
+                            <a href="#pricing"
+                                class="inline-block text-base transition duration-300 ease-in-out text-slate-300 hover:text-secondary mb-2 sm:text-sm">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#gallery"
+                                class="inline-block text-base transition duration-300 ease-in-out text-slate-300 hover:text-secondary mb-2 sm:text-sm">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#contact"
+                                class="inline-block text-base transition duration-300 ease-in-out text-slate-300 hover:text-secondary mb-2 sm:text-sm">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#booking"
+                                class="inline-block text-base transition duration-300 ease-in-out text-slate-300 hover:text-secondary mb-2 sm:text-sm">Pesanan</a>
+                        </li>
+                        <li>
+                            <a href="#about"
+                                class="inline-block text-base transition duration-300 ease-in-out text-slate-300 hover:text-secondary mb-2 sm:text-sm">About</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="w-full pt-10 border-t border-slate-500">
+                <div class="flex items-center justify-center mb-5">
+                    <!-- Whatsapp -->
+                    <a href="https://github.com/odetv/trivili-tailwindcss" target="_blank"
+                        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-white text-white transition duration-300 ease-in-out hover:bg-primary hover:text-white">
+                        <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    </a>
+                </div>
+                <p class="text-[0.65rem] text-slate-300 text-center">Copyright ©2022 Trivili | All Rights Reserved.</p>
+                <p class="text-[0.65rem] text-slate-500 text-center">Develop by 🤎odetv</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Toggle Return Home Start -->
+    <a href="#home" class="fixed hidden justify-center items-center z-[9999] bottom-3 right-3 p-3 h-12 w-12 transition duration-300 ease-in-out bg-primary rounded-full text-white text-center hover:animate-pulse" id="btn-return">
+        <span class="block h-3 w-3 rotate-45 border-t-2 border-l-2 mt-2"></span>
+    </a>
+    <!-- Toggle Return Home End -->
+
+    <script src="dist/js/script.js"></script>
+</body>
+
+</html>
